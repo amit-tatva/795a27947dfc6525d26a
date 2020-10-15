@@ -4,12 +4,13 @@ module Api
 
         #GET /api/users - returns all users from users table
         def index
-
+            @users = User.all
+            render json: @users
         end
 
         #GET /api/user/:id - returns specific user from users table given id
         def show
-
+            render json: @user
         end
 
         #POST /api/user - adds a new user to the users table
@@ -24,12 +25,20 @@ module Api
 
         #PUT /api/user/:id - updates specific user in users table
         def update
-
+            if @user.update(user_params)
+                render json: { user: @user, message: "User updated successfully."}, status: :ok
+            else
+                render json: @user.errors, status: :unprocessable_entity
+            end
         end
 
         #DELETE /api/user/:id - removes the specific user from users table with the given id
         def destroy
-
+            if @user.destroy
+                render json: { message: "User deleted successfully."}, status: :ok
+            else
+                render json: @user.errors, status: :unprocessable_entity
+            end
         end
 
         private
