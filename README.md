@@ -1,24 +1,67 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Versions required to run app:**
+- Ruby 2.6.3
+- Rails 6.0.3.4
+- db v4.4.1
 
-Things you may want to cover:
+**Gem used:**
+- gem 'mongoid', '~> 7.0.5'
 
-* Ruby version
+**Steps to setup project in local:**
+- git clone repo_url
+- bundle install
+- rails db:seed
 
-* System dependencies
+**List of Controllers**
+- users
+- typeahead
 
-* Configuration
+**List of Model**
+- User
 
-* Database creation
+**List of APIs with headers & request parameters**
 
-* Database initialization
+**API to get list of all Users**
+    URL: http://localhost:3000/api/users
+    Method: GET
+    Result: 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+    
+        [
+            {
+                "_id": {
+                    "$oid": "5f87d43f67c6111c002c8373"
+                },
+                "email": "ae@relativity.com",
+                "firstName": "albert",
+                "lastName": "einstein"
+            },
+            {
+                "_id": {
+                    "$oid": "5f87d43f67c6111c002c8374"
+                },
+                "email": "mc@radiation.com",
+                "firstName": "marie",
+                "lastName": "curie"
+            },
+            {
+                "_id": {
+                    "$oid": "5f87d43f67c6111c002c8375"
+                },
+                "email": "in@gravity.com",
+                "firstName": "issac",
+                "lastName": "newton"
+            },
+            {
+                "_id": {
+                    "$oid": "5f87d43f67c6111c002c8376"
+                },
+                "email": "gg@astronomy.com",
+                "firstName": "galileo",
+                "lastName": "galilei"
+            }
+        ]
 
-* Deployment instructions
 
-* ...
