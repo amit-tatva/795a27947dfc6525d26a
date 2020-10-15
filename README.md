@@ -3,7 +3,7 @@
 **Versions required to run app:**
 - Ruby 2.6.3
 - Rails 6.0.3.4
-- db v4.4.1
+- mongo db v4.4.1
 
 **Gem used:**
 - gem 'mongoid', '~> 7.0.5'
@@ -81,7 +81,7 @@
         }
         
 
-**API to create/add user **
+**API to create/add user**
 
 - URL: http://localhost:3000/api/users
 - Method: POST
